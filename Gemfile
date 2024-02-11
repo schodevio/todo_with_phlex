@@ -69,4 +69,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
+gem "phlex-rails"
 gem "vite_rails"
