@@ -14,9 +14,9 @@ class ApplicationLayout < ApplicationView
 				csp_meta_tag
 				csrf_meta_tags
 
-				helpers.vite_client_tag
-				helpers.vite_stylesheet_tag 'application.scss'
-				helpers.vite_javascript_tag 'application.js'
+				vite_client_tag
+				vite_stylesheet_tag 'application.scss'
+				vite_javascript_tag 'application.js'
 			end
 
 			body do
