@@ -3,9 +3,6 @@
 class ApplicationLayout < ApplicationView
 	include Phlex::Rails::Layout
 
-	include ActionView::Helpers::AssetTagHelper
-	include ViteRails::TagHelpers
-
 	def template(&block)
 		doctype
 
@@ -17,10 +14,9 @@ class ApplicationLayout < ApplicationView
 				csp_meta_tag
 				csrf_meta_tags
 
-				vite_stylesheet_tag 'application.scss'
-
-				vite_client_tag
-				vite_javascript_tag 'application.js'
+				helpers.vite_client_tag
+				helpers.vite_stylesheet_tag 'application.scss'
+				helpers.vite_javascript_tag 'application.js'
 			end
 
 			body do
